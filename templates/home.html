@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+  <h3>Place your vote for the best on-screen Super-Hero!</h3>
+  <!--- <h4>Current date/time: {{ current_time | datetimefilter }}</h4> --->
+  <br>
+  <form action="/">
+    {% for n in hero_list %}
+    <input type="radio" name="hero" value="{{ n }}">{{ n }}<br>
+    {% endfor %}
+  <br>
+  <input type="submit">
+  </form>
+  {% block footer %}
+    {{ super() }}
+  {% endblock %}
+{% endblock %}
