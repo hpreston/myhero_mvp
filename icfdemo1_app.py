@@ -1,3 +1,14 @@
+#! /usr/bin/python
+'''
+    This is the App Tier for a basic 3 tier application.
+    The application was designed to provide a simple demo
+    for Cisco Intercloud Fabric.
+
+    As designed, all three tiers running on the same host,
+    if running the app_server and data_servers on seperate
+    hosts, update the varables appropriately.
+'''
+
 __author__ = 'hapresto'
 
 from flask import Flask, make_response, request, jsonify

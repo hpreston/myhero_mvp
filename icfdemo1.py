@@ -1,3 +1,4 @@
+#! /usr/bin/python
 '''
     This is the Web Tier for a basic 3 tier application.
     The application was designed to provide a simple demo
@@ -36,6 +37,11 @@ def about():
 
 @app.route("/results")
 def results():
+    # Check for submitted vote
+    vote = request.args.get('hero')
+    if (vote):
+        v = urllib.urlopen(app_server + "/vote/" + vote)
+
     u = urllib.urlopen(app_server + "/results")
     page = u.read()
     tally = json.loads(page)
@@ -50,7 +56,6 @@ def datetimefilter(value, format='%Y/%m/%d %H:%M'):
 app.jinja_env.filters['datetimefilter'] = datetimefilter
 
 if __name__=='__main__':
-    app.run(debug=True, host='0.0.0.0')
-
+    app.run(debug=True, host='0.0.0.0', port=int("5000"))
 
 
