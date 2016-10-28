@@ -6,12 +6,16 @@
   <h4>Current date/time: {{ current_time | datetimefilter }}</h4>
   <br>
   <p>
-  This is a simple multi-tier application written in Python to demonstrate the capabilities of
-  Cisco's Intercloud Fabric for building a robust Hybrid Cloud.  The presentation layer (web)
-  is hosted in the Public Cloud and accessed directly through the internet to the Cloud Provider.
+  This is a simple multi-tier application written in Python to be used for demonstrating
+  hybrid cloud application design and deployment.  An initial use of the application is with
+  Cisco Intercloud Fabric.
+
+  The presentation layer (web) is hosted in the Public Cloud and accessed directly through the
+  internet to the Cloud Provider.
   The logic layer (app) is also hosted in the Public Cloud, and is secured from direct internet
-  access by the Intercloud Fabric Policies.  The data layer is being hosted in the enteprise
-  private data center and only accessible from the logic layer.
+  access by the Intercloud Fabric Policies.
+  The data layer is being hosted in the enteprise private data center and only accessible from
+  the logic layer.
   </p>
   <h4>Application Architecture Diagram</h4>
   <a href="static/icfdemo_arch_large.png"><img src="static/icfdemo_arch.png"></a>

@@ -1,8 +1,8 @@
 #! /usr/bin/python
 '''
-    This is the Web Tier for a basic 3 tier application.
+    This is the Data Tier for a basic 3 tier application.
     The application was designed to provide a simple demo
-    for Cisco Intercloud Fabric.
+    of a multi-tier application.
 
     As designed, all three tiers running on the same host,
     if running the app_server and data_servers on seperate

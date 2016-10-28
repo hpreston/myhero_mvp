@@ -2,7 +2,7 @@
 '''
     This is the Web Tier for a basic 3 tier application.
     The application was designed to provide a simple demo
-    for Cisco Intercloud Fabric.
+    of a multi-tier application.
 
     As designed, all three tiers running on the same host,
     if running the app_server and data_servers on seperate
@@ -29,7 +29,7 @@ def template_test():
     u = urllib.urlopen(app_server + "/hero_list")
     page = u.read()
     hero_list = json.loads(page)["heros"]
-    return render_template('home.html', hero_list=hero_list, title="Intercloud Fabric Demo Applicaiton", current_time=datetime.datetime.now())
+    return render_template('home.html', hero_list=hero_list, title="Multi-Tier Demo Applicaiton", current_time=datetime.datetime.now())
 
 @app.route("/about")
 def about():
